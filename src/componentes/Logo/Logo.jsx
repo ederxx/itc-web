@@ -1,5 +1,5 @@
 
-import LogoITC from "../../assets/itclogo.jpg";
+import LogoITC from "../../assets/itclogo.png";
 
 export default function Logo() {
 

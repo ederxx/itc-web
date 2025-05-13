@@ -6,9 +6,9 @@
 }
 .menu-button {
   background-color: transparent;
-  color: rgb(191, 131, 13);
-  border: 2px solid rgb(191, 131, 13);
-  padding: 8px 16px;
+  color: rgb(248, 247, 244);
+  border: 2px solid rgb(244, 243, 240);
+  padding: 16px 28px;
   border-radius: 5px;
   cursor: pointer;
 
@@ -29,14 +29,14 @@
   background-color: #d4ff00;
   border-radius: 6px;
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
-  padding: 10px 0;
+  padding: 15px 8px;
   z-index: 5;
   display: flex;
   flex-direction: column; /* Horizontal */
 }
 
 .dropdown-item {
-  padding: 10px 15px;
+  padding: 15px 5px;
   text-decoration: none;
   color: #003300;
   font-weight: bold;
@@ -45,10 +45,10 @@
 
 .dropdown-item:hover {
   background-color: #aeea00;
-  border-radius: 4px;
+  border-radius: 18px;
 }
 .header {
-  color: #eca808;
+  color: #1eb85f;
 
   font-family: Arial, sans-serif;
   position: relative;
@@ -61,12 +61,24 @@
   justify-content: space-between;
   align-items: center;
 }
-.titulo-header {
-  font-size: 1.3rem;
-  text-align: center;
-  color: rgb(191, 131, 13);
-  margin-top: 20px;
+.header h2 {
+  font-size: 1.0rem; /* Aumenta o tamanho do título principal */
+  font-weight: bold; /* Deixa o título mais destacado */
+  color: #06700b; /* Cor verde para o título */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra ao texto */
+  text-align: center; /* Centraliza o texto */
+  margin: 20px 0; /* Adiciona espaçamento ao redor */
+  font-family: 'Georgia', serif; /* Fonte elegante */
+  border-color: aliceblue;
 }
+
+.titulo-header {
+  font-size: 2.5rem; /* Define um tamanho menor para o subtítulo */
+  font-weight: 400; /* Deixa o subtítulo mais leve */
+  color: #ca7e14; /* Cor cinza para o subtítulo */
+  text-align: center; /* Centraliza o subtítulo */
+  margin-top: 10px; /* Adiciona um pequeno espaçamento superior */
+  font-family: 'Georgia', serif; /* Fonte elegante */}
 
 .logo-div {
   flex-shrink: 0;
@@ -81,8 +93,8 @@
 }
   
   .logo img {
-    width: 130px; /* Ajuste para um tamanho menor */
-    height: 130px;
+    width: 150px; /* Ajuste para um tamanho menor */
+    height: 150px;
 
   }
   

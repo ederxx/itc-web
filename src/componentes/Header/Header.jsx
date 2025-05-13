@@ -17,7 +17,8 @@ function Header() {
       <div className="logo">
         <LogoITC />
       </div>
-  
+      <h1 className="titulo-header">TERAPEUTAS CANNABICOS
+   </h1>
       <div className="menu-container">
         <button className="menu-button" onClick={alternarMenu}>MENU</button>
         {menuAberto && (
@@ -30,10 +31,7 @@ function Header() {
         )}
       </div>
     </div>
-  
-    <h1 className="titulo-header">
-      POR ISSO, PARA TODO INSTITUTO EXISTE TERAPIAA!
-    </h1>
+
   </header>
   );
 }
