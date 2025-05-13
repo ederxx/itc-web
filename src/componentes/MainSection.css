@@ -1,0 +1,71 @@
+
+/* ===================== */
+/* CONTEÚDO PRINCIPAL */
+/* ===================== */
+.main-section {
+  padding: 20px; /* Espaçamento interno */
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box; /* Inclui padding e borda no tamanho total */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  max-width: 1200px; /* Define o mesmo limite máximo de largura do header */
+  text-align: center; /* Centraliza o conteúdo interno */
+}
+
+
+/* Ícones */
+.icons-container {
+  width: 100%;
+  max-width: 100%; /* Garante que o contêiner ocupe toda a largura disponível */
+  margin: 10px auto;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap; /* Permite que os ícones quebrem linha se necessário */
+  justify-content: space-evenly; /* Distribui os ícones igualmente no contêiner */
+  align-items: center;
+  gap:100px; /* Ajusta o espaçamento entre os itens */
+  padding: 10px; /* Reduz o padding para caber melhor */
+}
+
+/* Cada ícone */
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px; /* Ajusta a largura para caber melhor */
+  transform: scale(1.2); /* Mantém o tamanho aumentado */
+}
+
+/* Imagens dos ícones */
+.icon-item img {
+  width: 100%; /* Ajusta a largura da imagem ao contêiner */
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.icon-item img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* Título dos ícones */
+.icon-item p {
+  font-size: 18px; /* Reduz o tamanho da fonte para caber melhor */
+  font-weight: bold;
+  color: #003d14;
+  text-shadow: 1px 1px 2px #a5d6a7;
+  margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .icon-item {
+    width: 120px; /* Reduz a largura dos ícones em telas menores */
+    transform: scale(1); /* Ajusta o tamanho para telas pequenas */
+  }
+
+  .icon-item p {
+    font-size: 16px; /* Reduz o tamanho da fonte em telas menores */
+  }
+}

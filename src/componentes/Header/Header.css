@@ -1,0 +1,97 @@
+.menu-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.menu-button {
+  background-color: transparent;
+  color: rgb(191, 131, 13);
+  border: 2px solid rgb(191, 131, 13);
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+
+
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+.menu-button:hover {
+  background-color: rgb(9, 130, 23);
+  color: #003300;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 0;
+  left: 110%; /* Coloca o menu ao lado direito do botão */
+  background-color: #d4ff00;
+  border-radius: 6px;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
+  padding: 10px 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column; /* Horizontal */
+}
+
+.dropdown-item {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #003300;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.dropdown-item:hover {
+  background-color: #aeea00;
+  border-radius: 4px;
+}
+.header {
+  color: #eca808;
+
+  font-family: Arial, sans-serif;
+  position: relative;
+  width: 100%; /* Faz o header ocupar toda a largura da tela */
+  max-width:1200px; /* Define um limite máximo de largura */
+  margin: 0 auto; /* Centraliza o header horizontalmente */
+}
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.titulo-header {
+  font-size: 1.3rem;
+  text-align: center;
+  color: rgb(191, 131, 13);
+  margin-top: 20px;
+}
+
+.logo-div {
+  flex-shrink: 0;
+  margin: 0; /* Remove o espaço à direita */
+  padding: 0; /* Remove qualquer margem à esquerda */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Garante que o conteúdo fique alinhado à esquerda */
+}
+  
+  .logo img {
+    width: 130px; /* Ajuste para um tamanho menor */
+    height: 130px;
+
+  }
+  
+
+  
+  html, body {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Ocupa toda a altura da tela */
+    margin: 0;
+  }

@@ -1,0 +1,29 @@
+.bottom-nav {
+  background-color: #f4f744; /* amarelo vibrante */
+  border: 2px solid #2d4b2f;
+align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 60px; /* Aumenta o espaçamento entre os itens */
+height: 60px; /* Aumenta a altura do bottom */
+  width: 100%; /* Faz o bottom ocupar toda a largura disponível */
+  max-width: 1200px; /* Define o mesmo limite máximo de largura do header */
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+/* Links do menu */
+.bottom-nav a {
+  color: #002d13;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+  border-radius: 5px;
+}
+
+.bottom-nav a:hover {
+  color: #37f644;
+  background-color: #db960bda;
+}
