@@ -1,0 +1,112 @@
+/* Estilo geral */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  height: auto; /* Ocupa toda a altura da tela */
+  box-sizing: border-box;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.about-image {
+  width: 40%; /* Ocupa 40% da largura */
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.about-text h1 {
+  color: #ffffff; /* Define o título como branco */
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  width: 60%; /* Ocupa 60% da largura */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  color: #d08712;
+  
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  height: auto; /* Ajusta a altura automaticamente */
+  overflow: visible; /* Permite que o texto seja exibido completamente */
+}
+
+.navigation-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-button {
+  padding: 10px 20px;
+  background-color: #4caf50; /* Cor padrão do botão */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #388e3c; /* Cor ao passar o mouse */
+}
+
+/* Estilo para botões desabilitados */
+.nav-button:disabled {
+  background-color: #cccccc; /* Cor cinza para indicar que está desabilitado */
+  color: #666666; /* Cor do texto desabilitado */
+  cursor: not-allowed; /* Cursor indicando que o botão não pode ser clicado */
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Empilha a imagem e o texto */
+    gap: 10px; /* Reduz o espaçamento entre os elementos */
+  }
+
+  .about-image {
+    display: none; /* Oculta a imagem em telas menores */
+  }
+
+  .about-text {
+    width: 100%; /* Faz o texto ocupar toda a largura */
+    padding: 10px; /* Adiciona padding para melhor leitura */
+    margin-top: 5px;
+  }
+
+  .about-text h1 {
+    font-size: 1.5rem; /* Reduz o tamanho do título */
+  }
+
+  .about-text p {
+    font-size: 0.9rem; /* Reduz o tamanho do texto */
+    line-height: 1.4; /* Ajusta o espaçamento entre linhas */
+    margin-top: 5px; /* Reduz o espaço entre o título e o parágrafo */
+  }
+
+  .nav-button {
+    font-size: 0.9rem; /* Reduz o tamanho dos botões */
+    padding: 8px 16px; /* Ajusta o padding dos botões */
+    
+  }
+}

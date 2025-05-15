@@ -23,20 +23,23 @@
 }
 
 .dropdown-menu {
+  list-style: none;
+
   position: absolute;
   top: 0;
-  left: 110%; /* Coloca o menu ao lado direito do botão */
+  left: 100%; /* Coloca o menu ao lado direito do botão */
   background-color: #d4ff00;
   border-radius: 6px;
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
-  padding: 15px 8px;
+  padding: 35px 14px;
   z-index: 5;
-  display: flex;
+  display: none;
   flex-direction: column; /* Horizontal */
 }
 
 .dropdown-item {
-  padding: 15px 5px;
+  padding: 10px 15px; /* Ajusta o espaçamento interno (dentro do item) */
+  margin: 5px 0; /* Ajusta o espaçamento externo (entre os itens) */
   text-decoration: none;
   color: #003300;
   font-weight: bold;
@@ -44,17 +47,28 @@
 }
 
 .dropdown-item:hover {
-  background-color: #aeea00;
-  border-radius: 18px;
+  background-color: rgba(9, 130, 23, 0.5); /* Cor verde com opacidade reduzida */
+  color: #003300; /* Mantém a cor do texto */
+  transition: background-color 0.2s ease-in-out
+
+
+
+}
+.menu-item:hover .dropdown-menu {
+  display: block; /* Mostra o menu ao passar o mouse */
 }
 .header {
   color: #1eb85f;
-
+  flex-direction: column;
+  box-sizing: border-box;
+  display: flex;
   font-family: Arial, sans-serif;
   position: relative;
   width: 100%; /* Faz o header ocupar toda a largura da tela */
   max-width:1200px; /* Define um limite máximo de largura */
   margin: 0 auto; /* Centraliza o header horizontalmente */
+  position: relative;
+  z-index: 10;
 }
 .header-top {
   display: flex;
@@ -101,9 +115,38 @@
 
   
   html, body {
-    display: flex;
+  
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente */
     height: 100vh; /* Ocupa toda a altura da tela */
     margin: 0;
   }
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+
+  .header {
+    padding: 0rem; /* Adiciona padding interno */
+    margin: 0; /* Remove margens externas */
+    margin-top: 0px;
+  }
+
+  .header-top {
+    flex-direction: column; /* Empilha logo, título e menu */
+    align-items: center;
+  }
+
+  .titulo-header {
+    font-size: 1.2rem; /* Reduz o tamanho do título */
+    margin-top: 0px;
+  }
+
+  .logo img {
+    width: 80px; /* Reduz o tamanho do logo */
+    height: auto;
+  }
+
+  .menu-container {
+    margin-top: 10px;
+  }
+}

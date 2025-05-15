@@ -3,7 +3,13 @@
 /* CONTEÚDO PRINCIPAL */
 /* ===================== */
 .main-section {
-  padding: 20px; /* Espaçamento interno */
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Centraliza horizontalmente */
+  justify-content: flex-start; /* Centraliza verticalmente */ 
+  width: 100%; /* Faz o contêiner ocupar toda a largura */
+  height: 100%; /* Faz o contêiner ocupar toda a altura disponível */
+  padding: 0px; /* Espaçamento interno */
   font-family: 'Arial', sans-serif;
   box-sizing: border-box; /* Inclui padding e borda no tamanho total */
   margin: 0 auto; /* Centraliza horizontalmente */
@@ -22,9 +28,9 @@
   height: auto;
   display: flex;
   flex-wrap: wrap; /* Permite que os ícones quebrem linha se necessário */
-  justify-content: space-evenly; /* Distribui os ícones igualmente no contêiner */
+  justify-content: center; /* Distribui os ícones igualmente no contêiner */
   align-items: center;
-  gap:100px; /* Ajusta o espaçamento entre os itens */
+  gap:120px; /* Ajusta o espaçamento entre os itens */
   padding: 10px; /* Reduz o padding para caber melhor */
 }
 
@@ -33,7 +39,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 250px; /* Ajusta a largura para caber melhor */
+  width: 210px; /* Ajusta a largura para caber melhor */
   transform: scale(1.2); /* Mantém o tamanho aumentado */
 }
 
@@ -59,15 +65,25 @@
 
   margin: 0;
 }
-
-/* Responsividade */
+/* Media query para telas menores */
 @media (max-width: 768px) {
+  .icons-container {
+    margin-top: -240px; /* Ajusta a margem superior em telas menores */
+    flex-wrap: nowrap; /* Evita quebra de linha */
+    justify-content: center; /* Alinha os ícones à esquerda */
+    overflow-x: auto; /* Permite rolagem horizontal */
+    gap: 55px; /* Reduz o espaçamento entre os ícones */
+  }
+
   .icon-item {
-    width: 120px; /* Reduz a largura dos ícones em telas menores */
-    transform: scale(1); /* Ajusta o tamanho para telas pequenas */
+    width: 50px; /* Reduz o tamanho dos ícones */
+  }
+
+  .icon-item img {
+    max-width: 100px; /* Reduz o tamanho da imagem */
   }
 
   .icon-item p {
-    font-size: 16px; /* Reduz o tamanho da fonte em telas menores */
+    font-size: 0.8rem; /* Ajusta o tamanho do texto */
   }
 }

@@ -1,24 +1,46 @@
-.page-wrapper {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 40px;
-  font-family: 'Arial', sans-serif;
-}
 .page-container {
-  background-image: url('../../assets/bg.png'); /* Substitua pelo caminho da sua imagem */
-  background-size: cover; /* Faz a imagem cobrir todo o contêiner */
-  background-position: center; /* Centraliza a imagem */
+  background-image: url('../../assets/bg.png'); /* Substitua pelo caminho correto da sua imagem */
+  background-size: 150%; /* Amplia a imagem para criar o efeito de movimento */
+  background-position: 0% 50%; /* Posição inicial do fundo */
   background-repeat: no-repeat; /* Evita repetição da imagem */
-  width: 70vw; /* Define a largura como 90% da largura da janela */
-  height: 80vh; /* Define a altura como 60% da altura da janela */
+  width: 80%; /* Define a largura */
+  height: 100vh; /* Define a altura */
+  display: flex;
   flex-direction: column; /* Organiza os elementos verticalmente */
   justify-content: space-between; /* Espaça os elementos verticalmente */
   align-items: center; /* Centraliza horizontalmente */
   padding: 20px; /* Espaçamento interno */
   box-sizing: border-box; /* Inclui padding no tamanho total */
   margin: 0 auto; /* Centraliza horizontalmente na página */
-  border-radius: 10px; /* Adiciona bordas arredondadas para um visual mais suave */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra para destaque */
+  border-radius: 10px; /* Adiciona bordas arredondadas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra */
+  animation: moveBackground 10s linear infinite; /* Aplica a animação */
+  position: relative;
+  cursor:crosshair; /* Define o cursor personalizado */}
+  
+
+/* Animação do fundo */
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 50%; /* Posição inicial */
+  }
+  50% {
+    background-position: 100% 50%; /* Move o fundo horizontalmente */
+  }
+  100% {
+    background-position: 0% 50%; /* Retorna à posição inicial */
+  }
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+  .page-container {
+    width: 100%; /* Ajusta a largura para telas menores */
+    height: auto; /* Ajusta a altura automaticamente */
+    padding: 40px; /* Remove o padding */
+    margin: 0; /* Remove margens externas */
+    display: flex;
+    min-height: 70vh; /* Garante que o fundo preencha toda a altura */
+    background-size: 500%; /* Mantém a imagem ampliada */
+  }
 }
